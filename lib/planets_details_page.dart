@@ -21,21 +21,21 @@ class PlanetDetailsPageState extends State<PlanetDetailsPage>
       child: Container(
         alignment: Alignment.center,
         color: Colors.grey.shade100,
-        child: Text('DISCOVER'),
+        child: Text('DESCUBRIR'),
       ),
     ),
     Tab(
       child: Container(
         alignment: Alignment.center,
         color: Colors.grey.shade100,
-        child: Text('HISTORY'),
+        child: Text('HISTORIA Y DETALLES'),
       ),
     ),
     Tab(
       child: Container(
         alignment: Alignment.center,
         color: Colors.grey.shade100,
-        child: Text('IMAGES'),
+        child: Text('IMAGENES'),
       ),
     )
   ];
@@ -141,14 +141,14 @@ class InfoTabs extends StatelessWidget {
                 context,
                 heading: planet.name,
                 intro: planet.intro,
-                subHeading: 'Formation',
+                subHeading: 'Detalles tecnicos',
                 desc: planet.formation,
               ),
               _buildInfo(
                 context,
-                heading: 'History of ${planet.name}',
+                heading: 'Historia de  ${planet.name}',
                 intro: planet.intro,
-                subHeading: 'Details',
+                subHeading: 'Detalles',
                 desc: planet.history,
               ),
               GridView.builder(
@@ -179,7 +179,7 @@ class InfoTabs extends StatelessWidget {
       padding: EdgeInsets.all(25.0),
       children: <Widget>[
         Text(
-          'The $heading',
+          '$heading',
           style: TextStyle(
             color: Colors.black,
             fontSize: 30.0,

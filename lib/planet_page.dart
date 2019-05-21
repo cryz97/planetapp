@@ -161,7 +161,7 @@ class PlanetPageState extends State<PlanetPage> with TickerProviderStateMixin {
         ),
         FlatButton(
           child: Text(
-            'Read More',
+            'Leer mas',
             style: TextStyle(
               color: Colors.white54,
               decoration: TextDecoration.underline,
