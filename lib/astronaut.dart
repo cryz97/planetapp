@@ -117,7 +117,7 @@ class AstronautState extends State<Astronaut> with TickerProviderStateMixin {
             fit: StackFit.expand,
             children: <Widget>[
               Image.asset(
-                'assets/spacesuit.png',
+                'assets/images/spacesuit.png',
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -157,7 +157,7 @@ class AstronautState extends State<Astronaut> with TickerProviderStateMixin {
                 child: RotationTransition(
                   turns: _smokeAnimController,
                   child: Image.asset(
-                    'assets/spacesmoke.png',
+                    'assets/images/spacesmoke.png',
                     fit: BoxFit.cover,
                     color: Colors.white,
                     width: size,

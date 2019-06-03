@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
+  shared_preferences: ^0.5.1+1
+  sqflite: any
 
 dev_dependencies:
   flutter_test:
@@ -18,5 +20,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-      - assets/
+      - assets/images/
+      - assets/database/
 

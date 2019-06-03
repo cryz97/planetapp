@@ -237,7 +237,7 @@ class PlanetPageState extends State<PlanetPage> with TickerProviderStateMixin {
                     scale: Tween<double>(begin: 1.0, end: 1.05)
                         .animate(_swipeAnimController),
                     child: Image.asset(
-                      'assets/flare.png',
+                      'assets/images/flare.png',
                       fit: BoxFit.cover,
                     ),
                   ),
