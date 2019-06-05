@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:planetapp/selectNextStep.dart';
 import 'package:planetapp/solar_system_page.dart';
 
 class Questions {
@@ -147,7 +148,7 @@ class _InitialQuestionnaireState extends State<InitialQuestionnaire> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => SolarSystemPage()),
+              MaterialPageRoute(builder: (context) => SelectNextStepPage()),
             );
           }),
       body: Container(
