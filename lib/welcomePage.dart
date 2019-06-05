@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planetapp/solar_system_page.dart';
+import 'package:planetapp/home.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -18,8 +18,10 @@ class WelcomePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
           ),
           onPressed: () {
+            /*  Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => SolarSystemPage()));*/
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => SolarSystemPage()));
+                .push(MaterialPageRoute(builder: (_) => HomePage()));
           },
           child: Text('Iniciar', style: TextStyle(color: Colors.white)),
         ));

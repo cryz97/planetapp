@@ -22,4 +22,7 @@ flutter:
   assets:
       - assets/images/
       - assets/database/
+      - assets/images/emotionFeliz.png
+      - assets/images/emotionTriste.png
+      - assets/images/emotionEnojado.png
 

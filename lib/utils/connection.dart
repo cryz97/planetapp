@@ -27,15 +27,12 @@ class Connection {
 
   Future<Database> initDb() async {
     if (_db == null) {
-      // await lock.synchronized(() async {
       if (_db == null) {
         var databasesPath = await getDatabasesPath();
         final myDir = new Directory(databasesPath);
         myDir.exists().then((isThere) {
           if (!isThere) {
-            myDir.create(recursive: true).then((Directory directory) async {
-              print("Directory New: " + directory.path);
-            });
+            myDir.create(recursive: true).then((Directory directory) async {});
           }
         });
         var path = join(databasesPath, "copy.db");
@@ -43,13 +40,10 @@ class Connection {
 
         try {
           if (!await file.exists()) {
-            // Copy from asset
             ByteData data = await rootBundle.load(join("assets", "copy.db"));
             List<int> bytes =
                 data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
             await new File(path).writeAsBytes(bytes);
-            print("Creating new copy from asset");
-            // open the database
             _db = await openDatabase(path, readOnly: false);
           } else {
             try {
@@ -59,17 +53,14 @@ class Connection {
             }
           }
         } catch (e) {
-          // Copy from asset
           ByteData data =
               await rootBundle.load(join("assets/database", "database.db"));
           List<int> bytes =
               data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
           await new File(path).writeAsBytes(bytes);
-          // open the database
           _db = await openDatabase(path, readOnly: false);
         }
       }
-      //});
     }
     return _db;
   }
